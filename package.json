@@ -4,7 +4,7 @@
   "source": "./src/index.html",
   "scripts": {
     "dev": "parcel serve",
-    "run": "http-server dist/ --cors",
+    "run": "http-server docs/ --cors",
     "build": "parcel build --dist-dir docs"
   },
   "keywords": [],

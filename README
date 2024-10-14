@@ -1,0 +1,4 @@
+BetterNewTab is a project aimed at improving the default firefox newtab.
+BetterNewTab features a minimalist layout, an exact time clock, a search engine selection option, and the [tokyo-night](https://github.com/tokyo-night/tokyo-night-vscode-theme) color scheme.
+
+![Example Screenshot](screenshots/exampleSearch.png?raw=true)

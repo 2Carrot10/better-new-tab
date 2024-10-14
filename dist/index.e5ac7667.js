@@ -613,12 +613,9 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 })();
 function isValid(string) {
     try {
-        // Try to create a new URL object from the string
         new URL(string);
-        // If no error is thrown, return true
         return true;
     } catch (error) {
-        // If an error is thrown, return false
         return false;
     }
 }
@@ -626,9 +623,8 @@ window.clickPress = function(event) {
     if (event.key != "Enter") return;
     var search = document.getElementById("searchTerm").value;
     if (search[0] == "/" || search.search("file:///") == 0) {
-        alert("filesystem search not supported!");
+        alert("searching filesystem not supported!");
         return;
-    //document.location.href = search;
     }
     if (search.search(/\w+\.\w+/) == 0) {
         if (isValid(search)) {
@@ -645,13 +641,6 @@ window.clickPress = function(event) {
         document.location.href = "https://google.com/search?q=" + a;
         return;
     }
-    //alert(a.search("%5C"))
-    //if(a.search("%5C") == 0) {
-    //console.log("test");
-    //a = "\\"+ a.substring(3);
-    //}
-    alert(a);
-    alert("https://duckduckgo.com/?q=" + a + "&origin=funnel_help");
     document.location.href = "https://duckduckgo.com/?q=" + a + "&origin=funnel_help";
 };
 
