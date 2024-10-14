@@ -9,9 +9,10 @@ scheme.
 To use BetterNewTab, first you must set up npm. Run the following code in the
 root directory of the project: 
 
-```
-bash npm install 
+``` bash
+npm install 
 ``` 
+
 On start, run the `npm run run` command, to run BetterNewTab. In firefox, go to 
 `application menu->Settings->Home`. Set `New Windows and Tabs` to `Custom URLs`, 
 and set the URL to the localhost port that your BetterNewTab is using (e.g.
