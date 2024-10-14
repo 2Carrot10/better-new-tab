@@ -1,0 +1,57 @@
+/* This @import section must be first*/
+@import "tailwindcss/base";
+/* @import "./custom-base-styles.css"; */
+
+@import "tailwindcss/components";
+/* @import "./custom-components.css"; */
+
+@import "tailwindcss/utilities";
+/* @import "./custom-utilities.css"; */
+
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.jetbrains-mono-regular {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.btn {
+@apply transition bg-tnblue jetbrains-mono-heavy text-tnbg py-2 px-4 border border-tnblue hover:border-tnbg border-4 rounded shadow hover:bg-tnbg duration-300 hover:shadow-w hover:text-tnfg
+
+}
+.btn-not-allowed {
+@apply opacity-50 cursor-not-allowed text-lg bg-tnblue jetbrains-mono-heavy text-tnbg py-2 px-4 border border-tnblue border-4 rounded shadow
+}
+
+
+.jetbrains-mono-heavy {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.nunito-regular {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.nunito-heavy {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 1000;
+  font-style: normal;
+}
+/*
+body {
+background-image: url("gradient_bg.png");
+}
+*/
