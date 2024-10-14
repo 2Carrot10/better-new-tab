@@ -13,7 +13,8 @@ root directory of the project:
 npm install 
 ``` 
 
-On start, run the `npm run run` command, to run BetterNewTab. In firefox, go to 
-`application menu->Settings->Home`. Set `New Windows and Tabs` to `Custom URLs`, 
-and set the URL to the localhost port that your BetterNewTab is using (e.g.
-`http://127.0.0.1:8080/`)
+On start, run the `npm run run` command to run BetterNewTab.
+
+In firefox, go to `application menu->Settings->Home`. Set `New Windows and Tabs` 
+to `Custom URLs`, and set the URL to the localhost port that your BetterNewTab 
+is using (e.g. `http://127.0.0.1:8080/`)
