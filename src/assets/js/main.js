@@ -1,4 +1,8 @@
-(function(){
+
+timeUpdate()
+setInterval(timeUpdate, 1000);
+
+function timeUpdate(){
 	var d = new Date();
 	var s = "";
 	var z = "";
@@ -26,9 +30,7 @@
 	z += q;
 	document.getElementById("cal").innerText = s;
 	document.getElementById("clock").innerText = z;
-
-	setTimeout(arguments.callee, 1000);
-})();
+};
 
 function isValid(string) {
     try {
@@ -37,6 +39,18 @@ function isValid(string) {
     } catch (error) {
         return false;
     }
+}
+
+
+function httpGetAsync(theUrl, callback)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(xmlHttp.responseText);
+    }
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    xmlHttp.send(null);
 }
 
 window.clickPress = function (event) {
@@ -63,7 +77,9 @@ window.clickPress = function (event) {
 		if(document.getElementById("search-engine").value == "Google") {
 			document.location.href = "https://google.com/search?q=" + a;	
 			return;
-		}
+		} else if(document.getElementById("search-engine").value == "Phi-3 Mini") {
+			httpGetAsync("http:/?localhost.11434/api/generate");
 
+		}
 		document.location.href = "https://duckduckgo.com/?q=" + a + "&origin=funnel_help"
 }
