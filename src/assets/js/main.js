@@ -33,53 +33,53 @@ function timeUpdate(){
 };
 
 function isValid(string) {
-    try {
-        new URL(string);
-        return true;
-    } catch (error) {
-        return false;
-    }
+	try {
+		new URL(string);
+		return true;
+	} catch (error) {
+		return false;
+	}
 }
 
 
 function httpGetAsync(theUrl, callback)
 {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function() { 
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-            callback(xmlHttp.responseText);
-    }
-    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
-    xmlHttp.send(null);
+	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.onreadystatechange = function() { 
+		if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+			callback(xmlHttp.responseText);
+	}
+	xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+	xmlHttp.send(null);
 }
 
 window.clickPress = function (event) {
-    if (event.key != "Enter") return;
-		var search = document.getElementById("searchTerm").value;
+	if (event.key != "Enter") return;
+	var search = document.getElementById("searchTerm").value;
 
-		if(search[0] == "/" || search.search("file:///") == 0) {
-			alert("searching filesystem not supported!");
+	if(search[0] == "/" || search.search("file:///") == 0) {
+		alert("searching filesystem not supported!");
+		return;
+	}
+
+	if(search.search(/\w+\.\w+/)==0) {
+		if(isValid(search)) {
+			document.location.href = search;
 			return;
 		}
 
-		if(search.search(/\w+\.\w+/)==0) {
-			if(isValid(search)) {
-				document.location.href = search;
-				return;
-			}
-
-			if(isValid("https://" + search)){
-				document.location.href = "https://" + search;
-				return;
-				};
-		}
-		var a =encodeURIComponent(search);
-		if(document.getElementById("search-engine").value == "Google") {
-			document.location.href = "https://google.com/search?q=" + a;	
+		if(isValid("https://" + search)){
+			document.location.href = "https://" + search;
 			return;
-		} else if(document.getElementById("search-engine").value == "Phi-3 Mini") {
-			httpGetAsync("http:/?localhost.11434/api/generate");
-
-		}
+		};
+	}
+	var a =encodeURIComponent(search);
+	if(document.getElementById("search-engine").value == "Google") {
+		document.location.href = "https://google.com/search?q=" + a;	
+	} else if(document.getElementById("search-engine").value == "ChatGPT") {
+		document.location.href = "https://chatgpt.com/search?q=" + a;	
+	}
+	else {
 		document.location.href = "https://duckduckgo.com/?q=" + a + "&origin=funnel_help"
+	}
 }

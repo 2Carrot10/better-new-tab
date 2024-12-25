@@ -1,17 +1,19 @@
-9948
-82/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/docs/index.html1731368153606995752 0
+9952
+96/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/dist/BetterNewTab.59712999.js1734986343621105896 0
+82/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/docs/index.html1734984377108850711 0
 93/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/docs/index.cfbff6bb.js.map1731367635484775271 0
 89/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/docs/index.cfbff6bb.js1731367635481442462 0
 94/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/docs/index.8db7ad26.css.map1729483302327128770 0
 90/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/docs/index.fccfbd91.css1729483302327128770 0
 93/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/docs/index.034b3e19.js.map1731368153613651777 0
+89/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/docs/index.366709e5.js1734984377108850711 0
 93/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/docs/index.e410f0f0.js.map1729483302327128770 0
 94/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/docs/index.fccfbd91.css.map1729483302327128770 0
 93/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/docs/index.0a6a648b.js.map1729483302327128770 0
 90/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/docs/index.108b9ea3.css1731367635481442462 0
-71/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/docs1731368153613651777 1
-81/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/src/index.html1731368010364922313 0
-80/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/src/assets/js1731368128638183107 1
+71/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/docs1734984377115517445 1
+81/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/src/index.html1734986316214083782 0
+80/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/src/assets/js1734984348758574154 1
 92/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/src/assets/images/pfp.png1729483302330462110 0
 84/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/src/assets/images1729483302330462110 1
 90/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/dist/index.4682b47d.css1729483361619016275 0
@@ -7607,7 +7609,7 @@
 121/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/yaml/browser/dist/nodes/addPairToJSMap.js1729483357408391408 0
 120/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/tailwindcss/lib/util/configurePlugins.js1729483357668429162 0
 108/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/css-tree/cjs/lexer/units.cjs1729483357735105509 0
-70/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/src1731368010364922313 1
+70/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/src1734986316214083782 1
 119/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/yaml/browser/dist/parse/line-counter.js1729483357705101153 0
 107/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/glob/dist/commonjs/index.js1729483357541744102 0
 110/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/yaml/browser/dist/parse/cst.js1729483357681764431 0
@@ -8425,6 +8427,7 @@
 104/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/fraction.js/package.json1729483357515073563 0
 106/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/fraction.js/bigfraction.js1729483357441729581 0
 95/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/postcss/LICENSE1729483357341715061 0
+93/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/docs/index.366709e5.js.map1734984377115517445 0
 106/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/caniuse-lite/dist/unpacker1729483357868458203 1
 111/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/caniuse-lite/data/regions/SG.js1729483357868458203 0
 108/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/htmlnano/lib/presets/max.mjs1729483357721770240 0
@@ -8966,6 +8969,7 @@
 138/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/@swc/helpers/_/_class_apply_descriptor_update/package.json1729483357655093892 0
 118/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/css-select/node_modules/domhandler/lib1729483357585083728 1
 121/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/caniuse-lite/data/features/user-timing.js1729483357878459655 0
+100/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/dist/BetterNewTab.59712999.js.map1734986343624439274 0
 94/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/gopd/README.md1729483357471733938 0
 114/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/caniuse-lite/data/features/json.js1729483357838453847 0
 117/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/caniuse-lite/data/features/dataset.js1729483357791780404 0
@@ -9936,7 +9940,7 @@
 89/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/glob/dist1729483357425060495 1
 93/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/glob/dist/esm1729483357691765883 1
 106/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/glob/dist/esm/processor.js1729483357578416093 0
-88/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/src/assets/js/main.js1731368128638183107 0
+88/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/src/assets/js/main.js1734984348755240789 0
 103/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/glob/dist/esm/ignore.js1729483357535076467 0
 122/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/sucrase/dist/esm/parser/util/identifier.js1729483357688432066 0
 97/home/twocarrot10/Documents/programs/firefoxStartPage/BetterNewTab/node_modules/@parcel/graph/lib1729483357615088084 1

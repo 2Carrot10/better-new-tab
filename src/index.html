@@ -5,12 +5,72 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+		<!-- <link rel="stylesheet" type="text/css" href="./assets/css/main.css"> -->
+<style>
+/* This @import section must be first*/
+@import "tailwindcss/base";
+/* @import "./custom-base-styles.css"; */
+
+@import "tailwindcss/components";
+/* @import "./custom-components.css"; */
+
+@import "tailwindcss/utilities";
+/* @import "./custom-utilities.css"; */
+
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.jetbrains-mono-regular {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.btn {
+@apply transition bg-tnblue jetbrains-mono-heavy text-tnbg py-2 px-4 border border-tnblue hover:border-tnbg border-4 rounded shadow hover:bg-tnbg duration-300 hover:shadow-w hover:text-tnfg
+
+}
+.btn-not-allowed {
+@apply opacity-50 cursor-not-allowed text-lg bg-tnblue jetbrains-mono-heavy text-tnbg py-2 px-4 border border-tnblue border-4 rounded shadow
+}
+
+
+.jetbrains-mono-heavy {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.nunito-regular {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.nunito-heavy {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 1000;
+  font-style: normal;
+}
+/*
+body {
+background-image: url("gradient_bg.png");
+}
+*/
+</style>
 	</head>
 	<!--  hover:bg-gradient-to-r from-tnbg to-tnfg -->
 
 	<body class="bg-tnbg fill-tnfg"> 
-		<script type="module" src="./assets/js/main.js"></script>
+		
+		<!-- <script type="module" src="./assets/js/main.js"></script> -->
 
 		<div class="flex flex-col justify-center items-center h-screen">
 			<div>
@@ -36,7 +96,7 @@
 						<select id="search-engine" name="currency" class="h-full rounded-md bg-transparent py-0 pl-2 pr-7 text-gray-500 text-lg">
 							<option>Duck Duck Go</option>
 							<option>Google</option>
-							<option>PHI-3 Mini</option>
+							<option>ChatGPT</option>
 						</select>
 					</div>
 
@@ -48,5 +108,92 @@
 		</div>
 		</div>
 		</div>
+
+<script>
+timeUpdate()
+setInterval(timeUpdate, 1000);
+
+function timeUpdate(){
+        var d = new Date();
+        var s = "";
+        var z = "";
+        var q = "";
+        q = d.getFullYear() + "-";
+        if(q.length <= 2) q = "0" + q;
+        s += q;
+
+        q = d.getMonth() + 1 + "-";
+        if(q.length <= 2) q = "0" + q;
+        s += q;
+
+        q = d.getDate().toString();
+        if(q.length <= 1) q = "0" + q;
+        s += q;
+
+        q = d.getHours() + ":";
+        if(q.length <= 2) q = "0" + q;
+        z += q;
+        q = d.getMinutes() + ":";
+        if(q.length <= 2) q = "0" + q;
+        z += q;
+        q = d.getSeconds().toString();
+        if(q.length == 1) q = "0" + q;
+        z += q;
+        document.getElementById("cal").innerText = s;
+        document.getElementById("clock").innerText = z;
+};
+
+function isValid(string) {
+        try {
+                new URL(string);
+                return true;
+        } catch (error) {
+                return false;
+        }
+}
+
+
+function httpGetAsync(theUrl, callback)
+{
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                        callback(xmlHttp.responseText);
+        }
+        xmlHttp.open("GET", theUrl, true); // true for asynchronous
+        xmlHttp.send(null);
+}
+
+window.clickPress = function (event) {
+        if (event.key != "Enter") return;
+        var search = document.getElementById("searchTerm").value;
+
+        if(search[0] == "/" || search.search("file:///") == 0) {
+                alert("searching filesystem not supported!");
+                return;
+        }
+
+        if(search.search(/\w+\.\w+/)==0) {
+                if(isValid(search)) {
+                        document.location.href = search;
+                        return;
+                }
+
+                if(isValid("https://" + search)){
+                        document.location.href = "https://" + search;
+                        return;
+                };
+        }
+        var a =encodeURIComponent(search);
+        if(document.getElementById("search-engine").value == "Google") {
+                document.location.href = "https://google.com/search?q=" + a;
+        } else if(document.getElementById("search-engine").value == "ChatGPT") {
+                document.location.href = "https://chatgpt.com/search?q=" + a;
+        }
+        else {
+                document.location.href = "https://duckduckgo.com/?q=" + a + "&origin=funnel_help"
+        }
+}
+		</script>
 	</body>
 </html>
