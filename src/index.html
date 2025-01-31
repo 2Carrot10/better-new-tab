@@ -168,20 +168,21 @@ window.clickPress = function (event) {
         if (event.key != "Enter") return;
         var search = document.getElementById("searchTerm").value;
 
+        // file locations should work 
+        /*
         if(search[0] == "/" || search.search("file:///") == 0) {
                 alert("searching filesystem not supported!");
                 return;
         }
+        */
 
-        if(search.search(/\w+\.\w+/)==0) {
+        if(search.search(/\w+\.\w+/) == 0 || isValid(search)) {
                 if(isValid(search)) {
-                        document.location.href = search;
-                        return;
+                        return document.location.href = search;
                 }
 
                 if(isValid("https://" + search)){
-                        document.location.href = "https://" + search;
-                        return;
+                        return document.location.href = "https://" + search;
                 };
         }
         var a =encodeURIComponent(search);
