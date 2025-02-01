@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title> Better New Tab </title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<!-- <link rel="stylesheet" type="text/css" href="./assets/css/main.css"> -->
-<style>
+  <head>
+    <title> Better New Tab </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/css/main.css"> -->
+    <style>
 /* This @import section must be first*/
 @import "tailwindcss/base";
 /* @import "./custom-base-styles.css"; */
@@ -30,11 +30,11 @@
 }
 
 .btn {
-@apply transition bg-tnblue jetbrains-mono-heavy text-tnbg py-2 px-4 border border-tnblue hover:border-tnbg border-4 rounded shadow hover:bg-tnbg duration-300 hover:shadow-w hover:text-tnfg
+  @apply transition bg-tnblue jetbrains-mono-heavy text-tnbg py-2 px-4 border border-tnblue hover:border-tnbg border-4 rounded shadow hover:bg-tnbg duration-300 hover:shadow-w hover:text-tnfg
 
 }
 .btn-not-allowed {
-@apply opacity-50 cursor-not-allowed text-lg bg-tnblue jetbrains-mono-heavy text-tnbg py-2 px-4 border border-tnblue border-4 rounded shadow
+  @apply opacity-50 cursor-not-allowed text-lg bg-tnblue jetbrains-mono-heavy text-tnbg py-2 px-4 border border-tnblue border-4 rounded shadow
 }
 
 
@@ -64,137 +64,137 @@ body {
 background-image: url("gradient_bg.png");
 }
 */
-</style>
-	</head>
-	<!--  hover:bg-gradient-to-r from-tnbg to-tnfg -->
+    </style>
+  </head>
+  <!--  hover:bg-gradient-to-r from-tnbg to-tnfg -->
 
-	<body class="bg-tnbg fill-tnfg"> 
-		
-		<!-- <script type="module" src="./assets/js/main.js"></script> -->
+  <body class="bg-tnbg fill-tnfg"> 
 
-		<div class="flex flex-col justify-center items-center h-screen">
-			<div>
-			<i class="transition duration-200 hover:text-tnhighlight2 py-3 text-center nf nf-md-firefox delay text-tnhighlight text-9xl"/>
-			</div>
-		<div class=" flex justify-center py-8">
-			<div class="shadow-w px-4 py-3 text-xl bg-tnhighlight rounded backdrop-blur-sm">
-				<div class="px-2 py-4 flex">
-					<div class = "grid place-items-center px-2">
-						<div>
-							<h1 id="cal" class="text-9xl text-tnfg jetbrains-mono-heavy"></h1>
-							<p id="clock" class="text-tnfg text-4xl jetbrains-mono-heavy align-baseline"></p>
-						</div>
-					</div>
-				</div>
-				<div class="relative mt-2">
-					<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-						<span class="text-gray-500 sm:text-sm jetbrains-mono-heavy"><i class = "nf nf-fa-magnifying_glass"/></span>
-					</div>
-					<input type="text" onkeypress="clickPress(event)" id="searchTerm" class="bg-tnbg text-tnfg jetbrains-mono-regular block w-full py-5 pl-7 pr-20 text-gray-900 placeholder:text-gray-400 sm:leading-6" placeholder="">
-					<div class="absolute inset-y-0 right-0 flex items-center">
-						<label for="currency" class="sr-only">Engine</label>
-						<select id="search-engine" name="currency" class="h-full rounded-md bg-transparent py-0 pl-2 pr-7 text-gray-500 text-lg">
-							<option>Duck Duck Go</option>
-							<option>Google</option>
-							<option>ChatGPT</option>
-						</select>
-					</div>
+    <!-- <script type="module" src="./assets/js/main.js"></script> -->
 
-			</div>
-				</div>
-			</div>
+    <div class="flex flex-col justify-center items-center h-screen">
+      <div>
+        <i class="transition duration-200 hover:text-tnhighlight2 py-3 text-center nf nf-md-firefox delay text-tnhighlight text-9xl"/>
+      </div>
+      <div class=" flex justify-center py-8">
+        <div class="shadow-w px-4 py-3 text-xl bg-tnhighlight rounded backdrop-blur-sm">
+          <div class="px-2 py-4 flex">
+            <div class = "grid place-items-center px-2">
+              <div>
+                <h1 id="cal" class="text-9xl text-tnfg jetbrains-mono-heavy"></h1>
+                <p id="clock" class="text-tnfg text-4xl jetbrains-mono-heavy align-baseline"></p>
+              </div>
+            </div>
+          </div>
+          <div class="relative mt-2">
+            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+              <span class="text-gray-500 sm:text-sm jetbrains-mono-heavy"><i class = "nf nf-fa-magnifying_glass"/></span>
+            </div>
+            <input type="text" onkeypress="clickPress(event)" id="searchTerm" class="bg-tnbg text-tnfg jetbrains-mono-regular block w-full py-5 pl-7 pr-20 text-gray-900 placeholder:text-gray-400 sm:leading-6" placeholder="">
+            <div class="absolute inset-y-0 right-0 flex items-center">
+              <label for="currency" class="sr-only">Engine</label>
+              <select id="search-engine" name="currency" class="h-full rounded-md bg-transparent py-0 pl-2 pr-7 text-gray-500 text-lg">
+                <option>Duck Duck Go</option>
+                <option>Google</option>
+                <option>ChatGPT</option>
+                <option>URL</option>
+              </select>
+            </div>
+
+          </div>
+        </div>
+      </div>
 
 
-		</div>
-		</div>
-		</div>
+    </div>
+    </div>
+    </div>
 
-<script>
+    <script>
 timeUpdate()
 setInterval(timeUpdate, 1000);
 
 function timeUpdate(){
-        var d = new Date();
-        var s = "";
-        var z = "";
-        var q = "";
-        q = d.getFullYear() + "-";
-        if(q.length <= 2) q = "0" + q;
-        s += q;
+  var d = new Date();
+  var s = "";
+  var z = "";
+  var q = "";
+  q = d.getFullYear() + "-";
+  if(q.length <= 2) q = "0" + q;
+  s += q;
 
-        q = d.getMonth() + 1 + "-";
-        if(q.length <= 2) q = "0" + q;
-        s += q;
+  q = d.getMonth() + 1 + "-";
+  if(q.length <= 2) q = "0" + q;
+  s += q;
 
-        q = d.getDate().toString();
-        if(q.length <= 1) q = "0" + q;
-        s += q;
+  q = d.getDate().toString();
+  if(q.length <= 1) q = "0" + q;
+  s += q;
 
-        q = d.getHours() + ":";
-        if(q.length <= 2) q = "0" + q;
-        z += q;
-        q = d.getMinutes() + ":";
-        if(q.length <= 2) q = "0" + q;
-        z += q;
-        q = d.getSeconds().toString();
-        if(q.length == 1) q = "0" + q;
-        z += q;
-        document.getElementById("cal").innerText = s;
-        document.getElementById("clock").innerText = z;
+  q = d.getHours() + ":";
+  if(q.length <= 2) q = "0" + q;
+  z += q;
+  q = d.getMinutes() + ":";
+  if(q.length <= 2) q = "0" + q;
+  z += q;
+  q = d.getSeconds().toString();
+  if(q.length == 1) q = "0" + q;
+  z += q;
+  document.getElementById("cal").innerText = s;
+  document.getElementById("clock").innerText = z;
 };
 
 function isValid(string) {
-        try {
-                new URL(string);
-                return true;
-        } catch (error) {
-                return false;
-        }
+  try {
+    new URL(string);
+    return true;
+  } catch (error) {
+    return false;
+  }
 }
 
 
 function httpGetAsync(theUrl, callback)
 {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.onreadystatechange = function() {
-                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-                        callback(xmlHttp.responseText);
-        }
-        xmlHttp.open("GET", theUrl, true); // true for asynchronous
-        xmlHttp.send(null);
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.onreadystatechange = function() {
+    if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+      callback(xmlHttp.responseText);
+  }
+  xmlHttp.open("GET", theUrl, true); // true for asynchronous
+  xmlHttp.send(null);
 }
 
 window.clickPress = function (event) {
-        if (event.key != "Enter") return;
-        var search = document.getElementById("searchTerm").value;
+  if (event.key != "Enter") return;
+  var search = document.getElementById("searchTerm").value;
 
-        // file locations should work 
-        /*
-        if(search[0] == "/" || search.search("file:///") == 0) {
-                alert("searching filesystem not supported!");
-                return;
-        }
-        */
 
-        if(search.search(/\w+\.\w+/) == 0 || isValid(search)) {
-                if(isValid(search)) {
-                        return document.location.href = search;
-                }
+  if(document.getElementById("search-engine").value == "URL") {
+    return document.location.href = search;
+  }
 
-                if(isValid("https://" + search)){
-                        return document.location.href = "https://" + search;
-                };
-        }
-        var a =encodeURIComponent(search);
-        if(document.getElementById("search-engine").value == "Google") {
-                document.location.href = "https://google.com/search?q=" + a;
-        } else if(document.getElementById("search-engine").value == "ChatGPT") {
-                document.location.href = "https://chatgpt.com/search?q=" + a;
-        }
-        else {
-                document.location.href = "https://duckduckgo.com/?q=" + a + "&origin=funnel_help"
-        }
+  if((document.getElementById("search-engine").value == "URL") ||
+      search.search(/\w+\.\w+/) == 0 || isValid(search) || search[0] == "/") {
+    if(search[0] == "/") search = "file://" + search;
+    if(isValid(search)) {
+      return document.location.href = search;
+    }
+
+    if(isValid("https://" + search)){
+      return document.location.href = "https://" + search;
+    };
+  }
+  var a =encodeURIComponent(search);
+  if(document.getElementById("search-engine").value == "Google") {
+    document.location.href = "https://google.com/search?q=" + a;
+  } else if(document.getElementById("search-engine").value == "ChatGPT") {
+    document.location.href = "https://chatgpt.com/search?q=" + a;
+  }
+  else {
+    document.location.href = "https://duckduckgo.com/?q=" + a + "&origin=funnel_help"
+  }
 }
-		</script>
-	</body>
+</script>
+  </body>
 </html>
