@@ -94,10 +94,12 @@ background-image: url("gradient_bg.png");
             <div class="absolute inset-y-0 right-0 flex items-center">
               <label for="currency" class="sr-only">Engine</label>
               <select id="search-engine" name="currency" class="h-full rounded-md bg-transparent py-0 pl-2 pr-7 text-gray-500 text-lg">
+                <option>Auto</option>
                 <option>Duck Duck Go</option>
                 <option>Google</option>
                 <option>ChatGPT</option>
                 <option>URL</option>
+                <option>Local File</option>
               </select>
             </div>
 
@@ -111,6 +113,7 @@ background-image: url("gradient_bg.png");
     </div>
 
     <script>
+    var defaultSearchEngine = "Duck Duck Go";
 timeUpdate()
 setInterval(timeUpdate, 1000);
 
@@ -168,31 +171,38 @@ function httpGetAsync(theUrl, callback)
 window.clickPress = function (event) {
   if (event.key != "Enter") return;
   var search = document.getElementById("searchTerm").value;
+  var searchType = document.getElementById("search-engine").value;
 
+  if(document.getElementById("search-engine").value == "Auto") {
+    if (search[0] == "/") {
+      searchType = "Local File";
+    } else if (search.search(/\w+\.\w+/) == 0 || isValid(search)) {
+      searchType = defaultSearchEngine;
+    } else if (search.search(/\w+\.\w+/) == 0 || isValid(search)) {
+        searchType = "URL";
+    }
+  }
 
-  if(document.getElementById("search-engine").value == "URL") {
+  if(searchType == "URL") {
+    if(!isValid(search)) {
+      return document.location.href = "https://" + search;
+    }
+    return document.location.href = search;
+  } else if(searchType == "Local File") {
+
+    if(search[0] == "/") return document.location.href = "file://" + search;
     return document.location.href = search;
   }
 
-  if((document.getElementById("search-engine").value == "URL") ||
-      search.search(/\w+\.\w+/) == 0 || isValid(search) || search[0] == "/") {
-    if(search[0] == "/") search = "file://" + search;
-    if(isValid(search)) {
-      return document.location.href = search;
-    }
+  var URIEncodedSearchTerm = encodeURIComponent(search);
 
-    if(isValid("https://" + search)){
-      return document.location.href = "https://" + search;
-    };
-  }
-  var a =encodeURIComponent(search);
   if(document.getElementById("search-engine").value == "Google") {
-    document.location.href = "https://google.com/search?q=" + a;
+    document.location.href = "https://google.com/search?q=" + URIEncodedSearchTerm;
   } else if(document.getElementById("search-engine").value == "ChatGPT") {
-    document.location.href = "https://chatgpt.com/search?q=" + a;
+    document.location.href = "https://chatgpt.com/search?q=" + URIEncodedSearchTerm;
   }
   else {
-    document.location.href = "https://duckduckgo.com/?q=" + a + "&origin=funnel_help"
+    document.location.href = "https://duckduckgo.com/?q=" + URIEncodedSearchTerm + "&origin=funnel_help";
   }
 }
 </script>
