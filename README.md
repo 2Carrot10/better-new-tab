@@ -1,6 +1,8 @@
 Better New Tab is a project aimed at improving the default firefox newtab. Better New Tab features a minimalist layout, an exact time clock, a search engine selection option, and the [tokyo-night](https://github.com/tokyo-night/tokyo-night-vscode-theme) color scheme.
 
-![Example Screenshot](screenshots/exampleSearch.png?raw=true)
+![Example Screenshot](screenshots/exampleSearch0.png?raw=true)
+![Example Screenshot](screenshots/exampleSearch1.png?raw=true)
+![Example Screenshot](screenshots/exampleSearch2.png?raw=true)
 # Setup
 Once you have downloaded the repository (`git clone https://github.com/2Carrot10/better-new-tab.git`), you need to build the project.
 Run the command `npm install` to install all packages. Next, run `npm run build`.
