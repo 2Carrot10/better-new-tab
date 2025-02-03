@@ -64,7 +64,7 @@ body {
 background-image: url("gradient_bg.png");
 }
 */
-    </style>
+</style>
   </head>
   <!--  hover:bg-gradient-to-r from-tnbg to-tnfg -->
 
@@ -114,97 +114,98 @@ background-image: url("gradient_bg.png");
 
     <script>
     var defaultSearchEngine = "Duck Duck Go";
-timeUpdate()
-setInterval(timeUpdate, 1000);
+    timeUpdate()
+    setInterval(timeUpdate, 1000);
 
-function timeUpdate(){
-  var d = new Date();
-  var s = "";
-  var z = "";
-  var q = "";
-  q = d.getFullYear() + "-";
-  if(q.length <= 2) q = "0" + q;
-  s += q;
+    function timeUpdate(){
+      var d = new Date();
+      var s = "";
+      var z = "";
+      var q = "";
+      q = d.getFullYear() + "-";
+      if(q.length <= 2) q = "0" + q;
+      s += q;
 
-  q = d.getMonth() + 1 + "-";
-  if(q.length <= 2) q = "0" + q;
-  s += q;
+      q = d.getMonth() + 1 + "-";
+      if(q.length <= 2) q = "0" + q;
+      s += q;
 
-  q = d.getDate().toString();
-  if(q.length <= 1) q = "0" + q;
-  s += q;
+      q = d.getDate().toString();
+      if(q.length <= 1) q = "0" + q;
+      s += q;
 
-  q = d.getHours() + ":";
-  if(q.length <= 2) q = "0" + q;
-  z += q;
-  q = d.getMinutes() + ":";
-  if(q.length <= 2) q = "0" + q;
-  z += q;
-  q = d.getSeconds().toString();
-  if(q.length == 1) q = "0" + q;
-  z += q;
-  document.getElementById("cal").innerText = s;
-  document.getElementById("clock").innerText = z;
-};
+      q = d.getHours() + ":";
+      if(q.length <= 2) q = "0" + q;
+      z += q;
+      q = d.getMinutes() + ":";
+      if(q.length <= 2) q = "0" + q;
+      z += q;
+      q = d.getSeconds().toString();
+      if(q.length == 1) q = "0" + q;
+      z += q;
+      document.getElementById("cal").innerText = s;
+      document.getElementById("clock").innerText = z;
+    };
 
-function isValid(string) {
-  try {
-    new URL(string);
-    return true;
-  } catch (error) {
-    return false;
-  }
-}
-
-
-function httpGetAsync(theUrl, callback)
-{
-  var xmlHttp = new XMLHttpRequest();
-  xmlHttp.onreadystatechange = function() {
-    if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-      callback(xmlHttp.responseText);
-  }
-  xmlHttp.open("GET", theUrl, true); // true for asynchronous
-  xmlHttp.send(null);
-}
-
-window.clickPress = function (event) {
-  if (event.key != "Enter") return;
-  var search = document.getElementById("searchTerm").value;
-  var searchType = document.getElementById("search-engine").value;
-
-  if(document.getElementById("search-engine").value == "Auto") {
-    if (search[0] == "/") {
-      searchType = "Local File";
-    } else if (search.search(/\w+\.\w+/) == 0 || isValid(search)) {
-      searchType = defaultSearchEngine;
-    } else if (search.search(/\w+\.\w+/) == 0 || isValid(search)) {
-        searchType = "URL";
+    function isValid(string) {
+      try {
+        new URL(string);
+        return true;
+      } catch (error) {
+        return false;
+      }
     }
-  }
 
-  if(searchType == "URL") {
-    if(!isValid(search)) {
-      return document.location.href = "https://" + search;
+
+    function httpGetAsync(theUrl, callback)
+  {
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.onreadystatechange = function() {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+          callback(xmlHttp.responseText);
+      }
+      xmlHttp.open("GET", theUrl, true); // true for asynchronous
+      xmlHttp.send(null);
     }
-    return document.location.href = search;
-  } else if(searchType == "Local File") {
 
-    if(search[0] == "/") return document.location.href = "file://" + search;
-    return document.location.href = search;
-  }
+    window.clickPress = function (event) {
+      if (event.key != "Enter") return;
+      var search = document.getElementById("searchTerm").value;
+      var searchType = document.getElementById("search-engine").value;
 
-  var URIEncodedSearchTerm = encodeURIComponent(search);
+      if(document.getElementById("search-engine").value == "Auto") {
+        if (search[0] == "/") {
+          searchType = "Local File";
+        } else if (search.search(/\w+\.\w+/) == 0 || isValid(search)) {
+          searchType = "URL";
+        } else {
 
-  if(document.getElementById("search-engine").value == "Google") {
-    document.location.href = "https://google.com/search?q=" + URIEncodedSearchTerm;
-  } else if(document.getElementById("search-engine").value == "ChatGPT") {
-    document.location.href = "https://chatgpt.com/search?q=" + URIEncodedSearchTerm;
-  }
-  else {
-    document.location.href = "https://duckduckgo.com/?q=" + URIEncodedSearchTerm + "&origin=funnel_help";
-  }
-}
-</script>
+          searchType = defaultSearchEngine;
+        }
+      }
+
+      if(searchType == "URL") {
+        if(!isValid(search)) {
+          return document.location.href = "https://" + search;
+        }
+        return document.location.href = search;
+      } else if(searchType == "Local File") {
+
+        if(search[0] == "/") return document.location.href = "file://" + search;
+        return document.location.href = search;
+      }
+
+      var URIEncodedSearchTerm = encodeURIComponent(search);
+
+      if(document.getElementById("search-engine").value == "Google") {
+        document.location.href = "https://google.com/search?q=" + URIEncodedSearchTerm;
+      } else if(document.getElementById("search-engine").value == "ChatGPT") {
+        document.location.href = "https://chatgpt.com/search?q=" + URIEncodedSearchTerm;
+      }
+      else {
+        document.location.href = "https://duckduckgo.com/?q=" + URIEncodedSearchTerm + "&origin=funnel_help";
+      }
+    }
+    </script>
   </body>
 </html>
