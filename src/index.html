@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <html lang="en">
   <head>
     <title> Better New Tab </title>
     <meta charset="UTF-8">
@@ -30,8 +29,7 @@
 }
 
 .btn {
-  @apply transition bg-tnblue jetbrains-mono-heavy text-tnbg py-2 px-4 border border-tnblue hover:border-tnbg border-4 rounded shadow hover:bg-tnbg duration-300 hover:shadow-w hover:text-tnfg
-
+  @apply transition duration-200 hover:text-tnhighlight2 py-3 text-center p-4 text-tnhighlight text-6xl 
 }
 .btn-not-allowed {
   @apply opacity-50 cursor-not-allowed text-lg bg-tnblue jetbrains-mono-heavy text-tnbg py-2 px-4 border border-tnblue border-4 rounded shadow
@@ -74,12 +72,12 @@ background-image: url("gradient_bg.png");
 
     <div class="flex flex-col justify-center items-center h-screen">
       <div>
-        <i class="transition duration-200 hover:text-tnhighlight2 py-3 text-center nf nf-md-firefox delay text-tnhighlight text-9xl"/>
+        <i class="py-3 text-center nf nf-md-firefox delay text-tnhighlight text-9xl"/>
       </div>
       <div class=" flex justify-center py-8">
         <div class="shadow-w px-4 py-3 text-xl bg-tnhighlight rounded backdrop-blur-sm">
           <div class="px-2 py-4 flex">
-            <div class = "grid place-items-center px-2">
+            <div class="place-items-center px-2">
               <div>
                 <h1 id="cal" class="text-9xl text-tnfg jetbrains-mono-heavy"></h1>
                 <p id="clock" class="text-tnfg text-4xl jetbrains-mono-heavy align-baseline"></p>
@@ -102,11 +100,28 @@ background-image: url("gradient_bg.png");
                 <option>Local File</option>
               </select>
             </div>
-
           </div>
         </div>
       </div>
 
+      <div class="flex justify-center w-screen">
+
+
+<a href="https://github.com" class="">
+        <i class="btn nf nf-dev-github"/>
+</a>
+<a href="https://desmos.com/scientific" class="">
+        <i class="btn nf nf-fa-calculator"/>
+</a>
+<a href="https://lambdacalc.io/" class="">
+        <i class="btn nf nf-md-lambda"/>
+</a>
+<a href="https://archlinux.org" class="">
+        <i class="btn nf nf-md-arch"/>
+</a>
+
+
+</div>
 
     </div>
     </div>
@@ -115,7 +130,7 @@ background-image: url("gradient_bg.png");
     <script>
     var defaultSearchEngine = "Duck Duck Go";
     timeUpdate()
-    setInterval(timeUpdate, 1000);
+    setInterval(timeUpdate, 1000 * 15); // Update every 15 seconds
 
     function timeUpdate(){
       var d = new Date();
@@ -137,12 +152,15 @@ background-image: url("gradient_bg.png");
       q = d.getHours() + ":";
       if(q.length <= 2) q = "0" + q;
       z += q;
-      q = d.getMinutes() + ":";
-      if(q.length <= 2) q = "0" + q;
+      q = d.getMinutes() //+ ":";
+      if(q < 10) q = "0" + q;
       z += q;
+      // Comment out to enable seconds seconds
+      /*
       q = d.getSeconds().toString();
       if(q.length == 1) q = "0" + q;
       z += q;
+      */
       document.getElementById("cal").innerText = s;
       document.getElementById("clock").innerText = z;
     };
